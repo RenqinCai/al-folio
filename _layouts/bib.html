@@ -1,22 +1,27 @@
 ---
 ---
 
+
 <div class="row">
-  <div class="col-sm-2 abbr">
+  <div class="col-sm-1 abbr">
   {% if entry.abbr %}
     {% if site.data.venues[entry.abbr] %}
     <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a></abbr>
     {% else %}
-    <abbr class="badge">{{entry.abbr}}</abbr>
+    <abbr class='badge'></abbr>
+    <!-- <abbr class="badge">{{entry.abbr}}</abbr> -->
     {% endif %}
   {% endif %}
   </div>
 
-  <div id="{{entry.key}}" class="col-sm-8">
+  <div id="{{entry.key}}" class="col-sm-10">
     {% if entry.type == "thesis" %}
       {{reference}}
     {% else %}
       <span class="title">{{entry.title}}</span>
+      {% if entry.honor %}
+      <span class="font-weight-bold" style="color:#0076df;"> {{entry.honor}} </span>  
+      {% endif %}
       <span class="author">
         {% for author in entry.author_array %}
           {% if forloop.length == 1 %}

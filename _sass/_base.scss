@@ -226,6 +226,13 @@ footer.sticky-bottom {
   }
 }
 
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #0076df;
+  border-radius: 50%;
+  display: inline-block;
+}
 
 // Projects
 
@@ -267,13 +274,16 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
       .abbr {
-        height: 2rem;
+        height: 0.5rem;
         margin-bottom: 0.5rem;
         abbr {
+          height: 8px;
+          width: 8px;
           display: inline-block;
           background-color: $theme-color;
-          padding-left: 1rem;
-          padding-right: 1rem;
+          // padding-left: 1rem;
+          // padding-right: 1rem;
+          border-radius: 50%;
         }
       }
       span {
